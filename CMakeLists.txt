@@ -38,6 +38,16 @@ target_link_libraries(IntegratedExecutable
     repository3_library
 )
 
+# コンパイル対象ファイルを静的解析の実行用にかき集めてくるフォルダを生成
+set(COMPILE_DIR ${CMAKE_BINARY_DIR}/compile_sources)
+file(MAKE_DIRECTORY ${COMPILE_DIR})
+
+# ソースファイルを集める
+foreach(SRC_FILE ${SOURCE_FILES})
+    get_filename_component(FILE_NAME ${SRC_FILE} NAME)
+    configure_file(${SRC_FILE} ${COMPILE_DIR}/${FILE_NAME} COPYONLY)
+endforeach()
+
 # 必要に応じてビルド設定を追加
 set_target_properties(IntegratedExecutable PROPERTIES
     CXX_STANDARD 14
