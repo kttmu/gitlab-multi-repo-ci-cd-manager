@@ -20,6 +20,8 @@
 /
 ├── main.py                 # CI/CDパイプラインの統合実行ファイル
 ├── build.sh                 # C++プロジェクトのビルド実行スクリプト
+├── submodule.txt            # 統合対象のリポジトリ一式を記載するモジュールリスト
+├── run_**.sh                # テスト用のシェルスクリプト
 ├── config/
 │   └─ settings.yaml         # CI/CDパイプラインの設定ファイル
 ├── scripts/
