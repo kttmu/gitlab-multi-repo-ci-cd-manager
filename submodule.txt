@@ -1,0 +1,3 @@
+repository1=path/to/repository1
+repository2=path/to/repository2
+repository3=path/to/repository3
