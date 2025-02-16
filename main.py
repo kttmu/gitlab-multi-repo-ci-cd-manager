@@ -22,6 +22,9 @@ def main():
     config = load_config()
     repositories = config['repositories']
 
+    # バージョン管理
+    manage_versions(repositories)
+    
     # 依存関係グラフの生成
     dependency_graph = build_dependency_graph(repositories)
 
@@ -33,8 +36,7 @@ def main():
         repo_path = repositories[repo]['path']
         run_tests(repo_path)
 
-    # バージョン管理
-    manage_versions(repositories)
+
 
 if __name__ == '__main__':
     main()
