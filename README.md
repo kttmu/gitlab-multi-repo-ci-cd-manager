@@ -32,3 +32,16 @@ pip install -r requirements.txt
 ├── LICENSE
 └── main.py
 ```
+
+```
+/
+├── main.py                 # CI/CDパイプラインの統合実行ファイル
+├── build.sh                 # C++プロジェクトのビルド実行スクリプト
+├── config/
+│   └── settings.yaml       # CI/CDパイプラインの設定ファイル
+├── scripts/
+│   ├── dependency_graph.py # 依存関係グラフの生成ロジック
+│   ├── version_manager.py  # バージョン管理スクリプト
+├── requirements.txt        # 依存ライブラリ一覧
+└── README.md                # プロジェクト概要、実行手順
+```
