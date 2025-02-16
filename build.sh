@@ -2,9 +2,6 @@
 
 set -e
 
-# バージョン管理スクリプトを実行して適切なバージョンをチェックアウト
-python3 scripts/version_manager.py
-
 # C++プロジェクトのビルドを実行
 mkdir -p build
 cd build
